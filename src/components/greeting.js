@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 import React from 'react';
 
-const ShowGreeting = () => {
+function ShowGreeting() {
   const greetings = useSelector((state) => state.Greeting);
 
   return (
@@ -9,5 +9,5 @@ const ShowGreeting = () => {
       {greetings.map((greeting) => <h1 key={greetings.indexOf(greeting)}>{greeting.greet}</h1>)}
     </div>
   );
-};
+}
 export default ShowGreeting;
